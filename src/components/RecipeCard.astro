@@ -7,21 +7,25 @@ const { recipe } = Astro.props;
 
 <article>
     <a href={`/recipes/${recipe.slug}`}>
-        <Image
-            src={recipe.data.image}
-            alt=""
-            height={200}
-            width={100}
-            class="bg-red-100"
-        />
-        <h4>{recipe.data.category}</h4>
-        <h3 class="text-2xl">{recipe.data.title}</h3>
-        <div class="flex flex-wrap gap-x-2 gap-y-1">
-            {
-                recipe.data.ingredients.map((ingredient) => (
-                    <IngredientChip ingredient={ingredient} />
-                ))
-            }
+        <div
+            class="bg-red-100 border-solid border-black border-2 overflow-hidden h-72"
+        >
+            <Image
+                src={recipe.data.image}
+                alt=""
+                class="hover:scale-110 transition-transform duration-300 object-cover h-full w-full"
+            />
         </div>
     </a>
+    <h4 class="font-serif">{recipe.data.category.toUpperCase()}</h4>
+    <a href={`/recipes/${recipe.slug}`}>
+        <h3 class="text-2xl">{recipe.data.title}</h3>
+    </a>
+    <div class="flex flex-wrap gap-x-2 gap-y-1 mt-2">
+        {
+            recipe.data.ingredients.map((ingredient) => (
+                <IngredientChip ingredient={ingredient} />
+            ))
+        }
+    </div>
 </article>

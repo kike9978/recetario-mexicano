@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RecipeCard from "../../components/RecipeCard.astro";
+import RecipeGridLayout from "../../layouts/RecipeGridLayout.astro";
 
 export async function getStaticPaths() {
     const allRecipes = await getCollection("recipes");
@@ -23,8 +24,6 @@ export async function getStaticPaths() {
 const [{ ingredient }, { recipes }] = [Astro.params, Astro.props];
 ---
 
-<BaseLayout pageTitle={ingredient}>
-    <div class="grid grid-cols-3 max-w-5xl mx-auto gap-6 mb-20">
-        {recipes.map((recipe) => <RecipeCard recipe={recipe} />)}
-    </div>
+<BaseLayout pageTitle={`Ingrediente: ${ingredient}`}>
+    <RecipeGridLayout recipes={recipes} />
 </BaseLayout>

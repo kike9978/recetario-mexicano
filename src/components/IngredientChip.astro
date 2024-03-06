@@ -2,6 +2,10 @@
 const { ingredient } = Astro.props;
 ---
 
-<span class="rounded-md text-white bg-pink-300 border-pink-500">
-    {ingredient}
-</span>
+<a href={`/ingredients/${ingredient.toLowerCase()}`}>
+    <span
+        class="rounded-full text-white bg-gray-200 border-pink-500 px-2 text-gray-900"
+    >
+        {ingredient}
+    </span>
+</a>

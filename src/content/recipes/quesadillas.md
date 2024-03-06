@@ -4,7 +4,7 @@ category: "Desayuno"
 ingredients: [
   "Masa de maíz",
   "Queso de hebra",
-  "Tomates verdes", "Chiles", "Cebolla", "Cilantro",
+  "Tomate verde", "Chile", "Cebolla", "Cilantro",
   "Aceite vegetal",
   "Sal"
 ]

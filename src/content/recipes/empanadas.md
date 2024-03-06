@@ -5,7 +5,7 @@ description: "Unas deliciosisimas empanadas rellenas de queso de hebra jugoso y 
 ingredients: [
   "Masa de maíz",
   "Queso de hebra",
-  "Tomates verdes", "Chiles", "Cebolla", "Cilantro",
+  "Tomate verde", "Chile", "Cebolla", "Cilantro",
   "Aceite vegetal",
   "Sal"
 ]
@@ -18,7 +18,7 @@ Ingredientes:
 
 2 tazas de masa para tortillas de maíz (puedes encontrarla en tiendas especializadas o prepararla tú mismo)
 1 taza de queso de hebra (puedes usar queso Oaxaca o queso mozzarella rallado)
-1 taza de salsa verde (puedes hacerla con tomates verdes, chiles, cebolla y cilantro)
+1 taza de salsa verde (puedes hacerla con title:, chiles, cebolla y cilantro)
 Aceite vegetal para freír
 Sal al gusto
 Instrucciones:
