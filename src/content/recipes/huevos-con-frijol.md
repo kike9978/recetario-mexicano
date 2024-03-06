@@ -8,7 +8,7 @@ ingredients: [
   "Aceite vegetal",
   "Sal"
 ]
-image: "./images/empanadas.jpg"
+image: "./images/huevos-con-frijol.jpg"
 
 ---
 

@@ -16,11 +16,11 @@ const demoCollection = defineCollection({
 })
 const recipeCollection = defineCollection({
     type: "content",
-    schema: z.object({
+    schema: ({ image }) => z.object({
         title: z.string(),
-        description: z.string(),
+        // description: z.string(),
         category: z.string(),
-        image: z.string(),
+        image: image(),
         ingredients: z.array(z.string())
     })
 })

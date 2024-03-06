@@ -10,15 +10,6 @@ const pageTitle = "Recetas";
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="grid grid-cols-3 max-w-5xl mx-auto gap-6 mb-20">
-        {
-            allRecipes.map((recipe) => (
-                <RecipeCard
-                    category={recipe.data.category}
-                    title={recipe.data.title}
-                    ingredients={recipe.data.ingredients}
-                    url={`/recipes/${recipe.slug}`}
-                />
-            ))
-        }
+        {allRecipes.map((recipe) => <RecipeCard recipe={recipe} />)}
     </div>
 </BaseLayout>

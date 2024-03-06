@@ -1,17 +1,24 @@
 ---
+import Image from "astro/components/Image.astro";
 import IngredientChip from "./IngredientChip.astro";
 
-const { ingredients, category, title, url } = Astro.props;
+const { recipe } = Astro.props;
 ---
 
 <article>
-    <a href={url}>
-        <img src="/" alt="" height={200} width={100} class="bg-red-100" />
-        <h4>{category}</h4>
-        <h3 class="text-2xl">{title}</h3>
+    <a href={`/recipes/${recipe.slug}`}>
+        <Image
+            src={recipe.data.image}
+            alt=""
+            height={200}
+            width={100}
+            class="bg-red-100"
+        />
+        <h4>{recipe.data.category}</h4>
+        <h3 class="text-2xl">{recipe.data.title}</h3>
         <div class="flex flex-wrap gap-x-2 gap-y-1">
             {
-                ingredients.map((ingredient) => (
+                recipe.data.ingredients.map((ingredient) => (
                     <IngredientChip ingredient={ingredient} />
                 ))
             }

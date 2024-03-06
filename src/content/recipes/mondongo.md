@@ -9,7 +9,7 @@ ingredients: [
   "Sal",
   "Pancita"
 ]
-image: "./images/empanadas.jpg"
+image: "./images/mondongo.jpg"
 
 ---
 

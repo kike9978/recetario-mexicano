@@ -25,15 +25,6 @@ const [{ ingredient }, { recipes }] = [Astro.params, Astro.props];
 
 <BaseLayout pageTitle={ingredient}>
     <div class="grid grid-cols-3 max-w-5xl mx-auto gap-6 mb-20">
-        {
-            recipes.map((recipe) => (
-                <RecipeCard
-                    category={recipe.data.category}
-                    title={recipe.data.title}
-                    ingredients={recipe.data.ingredients}
-                    url={`/recipes/${recipe.slug}`}
-                />
-            ))
-        }
+        {recipes.map((recipe) => <RecipeCard recipe={recipe} />)}
     </div>
 </BaseLayout>
