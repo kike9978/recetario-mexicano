@@ -1,17 +1,15 @@
 ---
-title: "Quesadillas"
+title: "Calabacitas guisadas"
 category: "Desayuno"
 ingredients: [
-  "Masa de maíz",
-  "Queso de hebra",
-  "Tomate verde", "Chile", "Cebolla", "Cilantro",
+  "Calabaza",
+  "Chile",
+  "cebolla",
   "Aceite vegetal",
-  "Sal"
 ]
-image: "./images/quesadillas.jpg"
+image: "./images/chilaquiles.jpg"
 
 ---
-
 
 # Ingredientes:
 
