@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const allRecipes = await getCollection("recipes");
+const uniqueIngredients = [
+    ...new Set(allRecipes.map((recipe) => recipe.data.ingredients).flat()),
+];
+---
+
+<BaseLayout pageTitle="Ingredientes">
+    {
+        uniqueIngredients.map((ingredient) => (
+            <a href={`/ingredients/${ingredient.toLowerCase()}`}>
+                {ingredient}
+            </a>
+        ))
+    }
+</BaseLayout>
