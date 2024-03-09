@@ -1,5 +1,5 @@
 ---
-import IngredientChip from "../../components/IngredientChip.astro";
+import IngredientCard from "../../components/IngredientCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 const allRecipes = await getCollection("recipes");
@@ -9,9 +9,11 @@ const uniqueIngredients = [
 ---
 
 <BaseLayout pageTitle="Ingredientes">
-    {
-        uniqueIngredients.map((ingredient) => (
-            <IngredientChip ingredient={ingredient} />
-        ))
-    }
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[80px]">
+        {
+            uniqueIngredients.map((ingredient) => (
+                <IngredientCard ingredient={ingredient} />
+            ))
+        }
+    </div>
 </BaseLayout>

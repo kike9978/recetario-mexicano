@@ -5,7 +5,7 @@ const { recipes } = Astro.props;
 ---
 
 <div
-    class="grid sm:grid-cols-2 md:grid-cols-3 w-[min(84rem,90%)] mx-auto gap-6 mb-20 gap-y-11 w-"
+    class="grid sm:grid-cols-2 md:grid-cols-3 mx-auto gap-6 mb-20 gap-y-11"
 >
     {recipes.map((recipe) => <RecipeCard recipe={recipe} />)}
 </div>

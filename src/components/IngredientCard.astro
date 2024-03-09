@@ -1,0 +1,11 @@
+---
+
+const { ingredient } = Astro.props
+
+---
+
+<a href={`/ingredients/${ingredient.toLowerCase()}` } class=" bg-gray-100 rounded-lg relative overflow-hidden">
+  <div class="w-full h-full absolute bg-gradient-to-t from-gray-800 opacity-50"></div>
+  <img src="https://picsum.photos/800/800" alt=""  class="w-full h-full object-cover">
+  <span class="absolute bottom-1 left-3 text-white">{ingredient}</span>
+</a>

@@ -21,7 +21,7 @@ const { recipe } = Astro.props;
     <a href={`/recipes/${recipe.slug}`} class="block">
         <h3 class="font-serif text-2xl">{recipe.data.title}</h3>
     </a>
-    <div class="flex flex-wrap gap-x-2 gap-y-1 mt-2">
+    <div class="flex flex-wrap gap-2 mt-2">
         {
             recipe.data.ingredients.map((ingredient) => (
                 <IngredientChip ingredient={ingredient} />
